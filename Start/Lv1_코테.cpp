@@ -87,25 +87,92 @@ string Phone_number_Change(string phone_number) {
 
     return answer;
 }
-
 //Lv_1 하샤드 수
-bool solution(int x) {
+bool Harshad_Number(int x) {
     bool answer = true;
+    int temp = x;
+    int sum = 0;
+   
+    while (temp != 0) {
+        sum += temp % 10;
+        temp /= 10;
+    }
 
+    return (x%sum==0) ? true : false; // 3항연산자 사용
+}
+//Lv_1 콜라츠 추측
+int Collatz(int num) {
+    int answer = 0;
+    long long count = num; // 626311을 넣었을때 int범위 넘어가 long long으로 해결
+
+    while (1)
+    {
+        if (count == 1||answer>499)
+        {
+            break;
+        }
+        if (count % 2 == 0)
+        {
+            count = count / 2;
+        }
+        else
+        {
+            count = (count * 3) + 1;
+        }
+        answer++;
+    }
+    
+    return (answer ==500) ? -1:answer;
+}
+//Lv_1 이상한 문자 만들기
+string solution(string s) {
+    string answer = "";
+    answer = s;
+    int temp = 0;
+    for (int i = 0; i < answer.size(); i++)
+    {
+        if (answer[i] == ' ')
+        {
+            temp = 0;
+            continue;
+        }
+
+        if (temp % 2 == 0 && ('a' <= answer[i] && answer[i] <= 'z'))
+        {
+            answer[i] = toupper(answer[i]);
+        }
+        else if (temp % 2 == 1 &&'A' <= answer[i] && answer[i] <= 'Z')
+        {
+            answer[i] = tolower(answer[i]);
+        }
+        temp++;
+    }
+  
     return answer;
+}
+//Lv_1 시저 암호
+string Caesar_cipher(string s, int n) {
+    string answer = "";
+
+    for (int i = 0; i < s.size(); i++) {
+        int c; // 연산 값을 담을 변수
+        if (s[i] >= 'a' && s[i] <= 'z') { // char의 최대로 받는 값이 128이므로 오류가 뜬다.
+            c = s[i] + n; // int형으로 받아준뒤
+            if (c > 'z') c -= 26; // char형의 최대 수치가 넘지않도록 빼주는 작업
+            s[i] = (char)c; //int형을 char로 변환.
+        }
+        else if (s[i] >= 'A' && s[i] <= 'Z') {
+            c = s[i] + n;
+            if (c > 'Z') c -= 26;
+            s[i] = (char)c;
+        }
+    }
+    answer = s;
+    return answer;
+
+    
 }
 int main(void) {
  
-    //Rectangle_Star();
-
-    //X_Interval_N_Number();
-    
-    vector<vector<int>> answer(5,vector<int>(3));
-    vector<vector<int>> answer2(5, vector<int>(3));
-
-   
-   
-    
-
     return 0;
 }
