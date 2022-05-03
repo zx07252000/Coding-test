@@ -172,7 +172,41 @@ string Caesar_cipher(string s, int n) {
 
     
 }
+//Lv_1 김서방찾기
+string Find_Kim(vector<string> seoul) {
+    string answer = "";
+    auto it = find(seoul.begin(), seoul.end(), "Kim");
+    answer += "김서방은 "+to_string(it - seoul.begin())+"에 있다";
+    
+    return answer;
+}
+//Lv_1 다트게임
+int dart(string dartResult) {
+    int answer = 0;
+    vector<int> v;
+    int index = 0;
+
+    for (int i = 0, s = 0; i < dartResult.size(); ++i)
+    {
+        if (dartResult[i] >= '0' && dartResult[i] <= '9')
+            s = s * 10 + dartResult[i] - '0';
+        else if (dartResult[i] == 'S') v.push_back(s), s = 0;
+        else if (dartResult[i] == 'D') v.push_back(s * s), s = 0;
+        else if (dartResult[i] == 'T') v.push_back(s * s * s), s = 0;
+        else if (dartResult[i] == '*') {
+            if (v.size() > 1) v.back() *= 2, v[v.size() - 2] *= 2;
+            else v.back() *= 2;
+        }
+        else v.back() = -v.back();
+
+    }
+    int ans = 0;
+    for (int i = 0; i < v.size(); ++i) ans += v[i];
+    return ans;
+}
 int main(void) {
  
+
+    
     return 0;
 }
