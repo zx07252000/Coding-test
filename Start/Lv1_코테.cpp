@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -204,9 +205,156 @@ int dart(string dartResult) {
     for (int i = 0; i < v.size(); ++i) ans += v[i];
     return ans;
 }
+
+int solution(vector<int> nums) {
+    int answer = -1;
+    int len = nums.size();
+
+    for (int i = 0; i < len; i++)
+    {
+        vector<bool> v(len - i, false);
+        v.insert(v.end(), 3, true);
+        do {
+            for (auto i : nums)
+            {
+                cout << i;
+
+            }
+        } while (next_permutation(nums.begin(), nums.end()));
+
+    }
+    // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+    cout << "Hello Cpp" << endl;
+
+    return answer;
+}
+
+int b_2588()
+{
+    int num_1, num_2;
+    scanf_s("%d %d", &num_1, &num_2);
+
+    vector<int> sum;
+    int temp = 0;
+    int answer = 0;
+
+    temp = num_2 % 10; // 1의 자리수 
+    sum.push_back(num_1 * temp);
+
+    temp = num_2 / 10; 
+    temp = temp % 10;
+    sum.push_back(num_1 * temp);
+
+    temp = num_2 / 100;
+    sum.push_back(num_1 * temp);
+    
+    for (auto i : sum)
+    {
+        cout << i;
+        cout << "\n";
+    }
+    cout << sum[0]+sum[1]*10+sum[2]*100;
+    return answer;
+}
+void b_2884()
+{
+    int H, M;
+    while (1)
+    {
+        cin >> H >> M;
+        if ((H >= 0 && H <= 23) && (M >= 0 && M <= 59))
+        {
+            break;
+        }
+        else
+        {
+            exit(0);
+        }
+    }
+    if (M - 45 >= 0)
+    {
+        //cout << H << " " << M - 45;
+        printf("%d %d",H,M - 45);
+
+    }
+    else if (M - 45 < 0)
+    {
+        if (H == 0)
+        {
+            //cout << "23" << " " << 60 + (M - 45);
+            printf("23 %d", 60 + (M - 45));
+        }
+        else
+        {
+            //cout << H - 1 << " " << 60 + (M - 45);
+            printf("%d %d",H - 1,60 + (M - 45));
+        }
+    }
+}
+void b_2480()
+{
+    int sum[3] = { 0,0,0 };
+
+    scanf_s("%d %d %d",&sum[0],&sum[1],&sum[2]);
+    for (auto i : sum)
+    {
+        if ((sum[i] > 6) || (sum[i] < 1))
+        {
+            exit(0);
+        }
+        else
+            break;
+    }
+
+    //같은눈 3개
+    if ((sum[0]==sum[1])&&(sum[1]==sum[2])) 
+    {
+        cout << 10000 + sum[0] * 1000;
+    }
+    else if (A == B) printf("%d", 1000 + A * 100);
+    else if (B == C) printf("%d", 1000 + B * 100);
+    else if (C == A) printf("%d", 1000 + C * 100);
+    else {
+        if (A > B && A > C) printf("%d", A * 100);
+        else if (B > C) printf("%d", B * 100);
+        else printf("%d", C * 100);
+    }
+    
+    //// 같은 눈 2개
+    //if ((sum[0] == sum[1]) &&(sum[0]!=sum[2]) )
+    //{
+    //    cout << 1000 + sum[0] * 100;
+    //}
+    //else if ((sum[1] == sum[2]) && (sum[0] != sum[2]))
+    //{
+    //    cout << 1000 + sum[1] * 100;
+    //}
+    //else if ((sum[0] == sum[2]) && (sum[1] != sum[2]))
+    //{
+    //    cout << 1000 + sum[0] * 100;
+    //}
+    //
+    //if ((sum[0] != sum[1]) && (sum[1] != sum[2]))
+    //{
+    //    if ((sum[0] > sum[1]) && (sum[0]>sum[2]))
+    //    {
+    //        cout << sum[0] * 100;
+    //    }
+    //    else if ((sum[1] > sum[0]) && (sum[1] > sum[2]))
+    //    {
+    //        cout << sum[1] * 100;
+    //    }
+    //    else if ((sum[2] > sum[0]) && (sum[2] > sum[1]))
+    //    {
+    //        cout << sum[2] * 100;
+    //    }
+    //}
+}
 int main(void) {
  
-
+    //b_2588();
+    //b_2884();
+    b_2480();
     
     return 0;
 }
