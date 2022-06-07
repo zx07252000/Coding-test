@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <stdio.h>
 #include <vector>
 #include <string>
@@ -6,35 +6,35 @@
 
 using namespace std;
 
-//Lv1_Á÷»ç°¢Çüº°Âï±â
+//Lv1_ì§ì‚¬ê°í˜•ë³„ì°ê¸°
 void Rectangle_Star()
 {
     int n, m;
     cin >> n >> m;
 
-    // ÀÎÀÚ·Î ¹Ş¾Æ¼­ 2Â÷¿ø º¤ÅÍ ÃÊ±âÈ­
+    // ì¸ìë¡œ ë°›ì•„ì„œ 2ì°¨ì› ë²¡í„° ì´ˆê¸°í™”
     vector<vector<int>> Arr(n,vector<int>(m,0)); 
 
-    // sumÀº ÀÎÀÚ arrÀÇ »çÀÌÁî´Â n
+    // sumì€ ì¸ì arrì˜ ì‚¬ì´ì¦ˆëŠ” n
     for (const auto Arr_Factor : Arr) 
     {
-        // sum2´Â ÀÎÀÚ sumÀº m 
+        // sum2ëŠ” ì¸ì sumì€ m 
         for (auto Arr_Factor_Factor : Arr_Factor)
         {
             cout <<"*";
         }
-        // endlÀ» ¾È¾²´Â ÀÌÀ¯´Â ½Ã°£ÃÊ°ú ³¯¼öµµ ÀÖÀ½
-        // ¹öÆÛ Á¤¸®ÇÏ´Â ±â´ÉÀ» °¡Áö°í ÀÖ¾î¼­
+        // endlì„ ì•ˆì“°ëŠ” ì´ìœ ëŠ” ì‹œê°„ì´ˆê³¼ ë‚ ìˆ˜ë„ ìˆìŒ
+        // ë²„í¼ ì •ë¦¬í•˜ëŠ” ê¸°ëŠ¥ì„ ê°€ì§€ê³  ìˆì–´ì„œ
         cout << "\n";
     }
    
 }
-//Lv1_X¸¸Å­_°£°İÀÌ_ÀÖ´Â_N°³ÀÇ¼ıÀÚ
+//Lv1_Xë§Œí¼_ê°„ê²©ì´_ìˆëŠ”_Nê°œì˜ìˆ«ì
 vector<long long> X_Interval_N_Number() {
     
-    // Å©±â°¡ Ä¿¼­
+    // í¬ê¸°ê°€ ì»¤ì„œ
     long long x;
-    // ÀÚ¿¬¼ö¸¸ Ç¥Çö
+    // ìì—°ìˆ˜ë§Œ í‘œí˜„
     unsigned int n;
     cin >> x >> n;
     vector<long long> answer;
@@ -52,7 +52,7 @@ vector<long long> X_Interval_N_Number() {
 
     return answer;
 }
-//Lv1_Çà·ÄÀÇµ¡¼À
+//Lv1_í–‰ë ¬ì˜ë§ì…ˆ
 vector<vector<int>> Procession_Plus(vector<vector<int>> arr_1, vector<vector<int>> arr_2) {
 
     int x, y;
@@ -70,7 +70,7 @@ vector<vector<int>> Procession_Plus(vector<vector<int>> arr_1, vector<vector<int
     
     return answer;
 }
-//Lv1_ÇÚµåÆù ¹øÈ£ °¡¸®±â
+//Lv1_í•¸ë“œí° ë²ˆí˜¸ ê°€ë¦¬ê¸°
 string Phone_number_Change(string phone_number) {
 
     string answer = "";
@@ -88,7 +88,7 @@ string Phone_number_Change(string phone_number) {
 
     return answer;
 }
-//Lv_1 ÇÏ»şµå ¼ö
+//Lv_1 í•˜ìƒ¤ë“œ ìˆ˜
 bool Harshad_Number(int x) {
     bool answer = true;
     int temp = x;
@@ -99,12 +99,12 @@ bool Harshad_Number(int x) {
         temp /= 10;
     }
 
-    return (x%sum==0) ? true : false; // 3Ç×¿¬»êÀÚ »ç¿ë
+    return (x%sum==0) ? true : false; // 3í•­ì—°ì‚°ì ì‚¬ìš©
 }
-//Lv_1 Äİ¶óÃ÷ ÃßÃø
+//Lv_1 ì½œë¼ì¸  ì¶”ì¸¡
 int Collatz(int num) {
     int answer = 0;
-    long long count = num; // 626311À» ³Ö¾úÀ»¶§ int¹üÀ§ ³Ñ¾î°¡ long longÀ¸·Î ÇØ°á
+    long long count = num; // 626311ì„ ë„£ì—ˆì„ë•Œ intë²”ìœ„ ë„˜ì–´ê°€ long longìœ¼ë¡œ í•´ê²°
 
     while (1)
     {
@@ -125,7 +125,7 @@ int Collatz(int num) {
     
     return (answer ==500) ? -1:answer;
 }
-//Lv_1 ÀÌ»óÇÑ ¹®ÀÚ ¸¸µé±â
+//Lv_1 ì´ìƒí•œ ë¬¸ì ë§Œë“¤ê¸°
 string solution(string s) {
     string answer = "";
     answer = s;
@@ -151,16 +151,16 @@ string solution(string s) {
   
     return answer;
 }
-//Lv_1 ½ÃÀú ¾ÏÈ£
+//Lv_1 ì‹œì € ì•”í˜¸
 string Caesar_cipher(string s, int n) {
     string answer = "";
 
     for (int i = 0; i < s.size(); i++) {
-        int c; // ¿¬»ê °ªÀ» ´ãÀ» º¯¼ö
-        if (s[i] >= 'a' && s[i] <= 'z') { // charÀÇ ÃÖ´ë·Î ¹Ş´Â °ªÀÌ 128ÀÌ¹Ç·Î ¿À·ù°¡ ¶á´Ù.
-            c = s[i] + n; // intÇüÀ¸·Î ¹Ş¾ÆÁØµÚ
-            if (c > 'z') c -= 26; // charÇüÀÇ ÃÖ´ë ¼öÄ¡°¡ ³ÑÁö¾Êµµ·Ï »©ÁÖ´Â ÀÛ¾÷
-            s[i] = (char)c; //intÇüÀ» char·Î º¯È¯.
+        int c; // ì—°ì‚° ê°’ì„ ë‹´ì„ ë³€ìˆ˜
+        if (s[i] >= 'a' && s[i] <= 'z') { // charì˜ ìµœëŒ€ë¡œ ë°›ëŠ” ê°’ì´ 128ì´ë¯€ë¡œ ì˜¤ë¥˜ê°€ ëœ¬ë‹¤.
+            c = s[i] + n; // intí˜•ìœ¼ë¡œ ë°›ì•„ì¤€ë’¤
+            if (c > 'z') c -= 26; // charí˜•ì˜ ìµœëŒ€ ìˆ˜ì¹˜ê°€ ë„˜ì§€ì•Šë„ë¡ ë¹¼ì£¼ëŠ” ì‘ì—…
+            s[i] = (char)c; //intí˜•ì„ charë¡œ ë³€í™˜.
         }
         else if (s[i] >= 'A' && s[i] <= 'Z') {
             c = s[i] + n;
@@ -173,15 +173,15 @@ string Caesar_cipher(string s, int n) {
 
     
 }
-//Lv_1 ±è¼­¹æÃ£±â
+//Lv_1 ê¹€ì„œë°©ì°¾ê¸°
 string Find_Kim(vector<string> seoul) {
     string answer = "";
     auto it = find(seoul.begin(), seoul.end(), "Kim");
-    answer += "±è¼­¹æÀº "+to_string(it - seoul.begin())+"¿¡ ÀÖ´Ù";
+    answer += "ê¹€ì„œë°©ì€ "+to_string(it - seoul.begin())+"ì— ìˆë‹¤";
     
     return answer;
 }
-//Lv_1 ´ÙÆ®°ÔÀÓ
+//Lv_1 ë‹¤íŠ¸ê²Œì„
 int dart(string dartResult) {
     int answer = 0;
     vector<int> v;
@@ -223,7 +223,7 @@ int solution(vector<int> nums) {
         } while (next_permutation(nums.begin(), nums.end()));
 
     }
-    // [½ÇÇà] ¹öÆ°À» ´©¸£¸é Ãâ·Â °ªÀ» º¼ ¼ö ÀÖ½À´Ï´Ù.
+    // [ì‹¤í–‰] ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ ì¶œë ¥ ê°’ì„ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
     cout << "Hello Cpp" << endl;
 
     return answer;
@@ -238,7 +238,7 @@ int b_2588()
     int temp = 0;
     int answer = 0;
 
-    temp = num_2 % 10; // 1ÀÇ ÀÚ¸®¼ö 
+    temp = num_2 % 10; // 1ì˜ ìë¦¬ìˆ˜ 
     sum.push_back(num_1 * temp);
 
     temp = num_2 / 10; 
@@ -306,21 +306,21 @@ void b_2480()
             break;
     }
 
-    //°°Àº´« 3°³
-    if ((sum[0]==sum[1])&&(sum[1]==sum[2])) 
-    {
-        cout << 10000 + sum[0] * 1000;
-    }
-    else if (A == B) printf("%d", 1000 + A * 100);
-    else if (B == C) printf("%d", 1000 + B * 100);
-    else if (C == A) printf("%d", 1000 + C * 100);
-    else {
-        if (A > B && A > C) printf("%d", A * 100);
-        else if (B > C) printf("%d", B * 100);
-        else printf("%d", C * 100);
-    }
+    ////ê°™ì€ëˆˆ 3ê°œ
+    //if ((sum[0]==sum[1])&&(sum[1]==sum[2])) 
+    //{
+    //    cout << 10000 + sum[0] * 1000;
+    //}
+    //else if (A == B) printf("%d", 1000 + A * 100);
+    //else if (B == C) printf("%d", 1000 + B * 100);
+    //else if (C == A) printf("%d", 1000 + C * 100);
+    //else {
+    //    if (A > B && A > C) printf("%d", A * 100);
+    //    else if (B > C) printf("%d", B * 100);
+    //    else printf("%d", C * 100);
+    //}
     
-    //// °°Àº ´« 2°³
+    //// ê°™ì€ ëˆˆ 2ê°œ
     //if ((sum[0] == sum[1]) &&(sum[0]!=sum[2]) )
     //{
     //    cout << 1000 + sum[0] * 100;
@@ -350,11 +350,37 @@ void b_2480()
     //    }
     //}
 }
+
+
+
+// lv2_124ë‚˜ë¼ì˜ìˆ«ì
+string solution(int n) {
+    
+    string answer = "";
+    string temp[3]{ "4", "1", "2" };
+    while (n) {
+        // 3ìœ¼ë¡œ ë‚˜ëˆˆë’¤ 0,1,2ì— ë”°ë¼ì„œ ì €ì¥
+        answer = temp[n % 3] + answer;
+        // ë§Œì¼ 3ìœ¼ë¡œ ë‚˜ëˆ  ë–¨ì–´ì§€ë©´ 3ìœ¼ë¡œ ë‚˜ëˆ„ê³  -1
+        if (!(n % 3))
+            n = n / 3 - 1;
+        else
+            n = n / 3;
+    }
+    return answer;
+}
+
+void test()
+{
+
+}
+
 int main(void) {
  
     //b_2588();
     //b_2884();
-    b_2480();
+    //b_2480();
+    solution(27);
     
     return 0;
 }
