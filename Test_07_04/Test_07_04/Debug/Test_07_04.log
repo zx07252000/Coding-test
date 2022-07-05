@@ -1,4 +1,4 @@
-﻿  소스.cpp
-C:\Users\zx072\OneDrive\바탕 화면\Test_07_04\Test_07_04\소스.cpp(25,17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\zx072\OneDrive\바탕 화면\Test_07_04\Test_07_04\소스.cpp(12,12): warning C4101: 'SUM' :참조되지 않은 지역 변수입니다.
-  Test_07_04.vcxproj -> C:\Users\zx072\OneDrive\바탕 화면\Test_07_04\Debug\Test_07_04.exe
+﻿  Bronze.cpp
+C:\Users\zx072\OneDrive\바탕 화면\Unity\Coding-test\Test_07_04\Test_07_04\Bronze.cpp(65,17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\zx072\OneDrive\바탕 화면\Unity\Coding-test\Test_07_04\Test_07_04\Bronze.cpp(52,12): warning C4101: 'SUM' :참조되지 않은 지역 변수입니다.
+  Test_07_04.vcxproj -> C:\Users\zx072\OneDrive\바탕 화면\Unity\Coding-test\Test_07_04\Debug\Test_07_04.exe
