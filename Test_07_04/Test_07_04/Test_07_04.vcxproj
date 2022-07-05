@@ -140,11 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bronze.cpp" />
+    <ClCompile Include="Gold.cpp" />
+    <ClCompile Include="Sliver.cpp" />
     <ClCompile Include="소스.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bronze.h" />
+    <ClInclude Include="Gold.h" />
     <ClInclude Include="MyState.h" />
+    <ClInclude Include="Sliver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

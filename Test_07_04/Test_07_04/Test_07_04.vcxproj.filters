@@ -13,13 +13,28 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Bronze">
+      <UniqueIdentifier>{6d9db2a9-4699-4069-a3f7-05cc285793de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Sliver">
+      <UniqueIdentifier>{92e22e5b-ac4d-4008-81c6-51b0ce6f1110}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Gold">
+      <UniqueIdentifier>{5c72dbb0-6480-4f70-9b91-bdec98f1d824}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="소스.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Bronze.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Bronze</Filter>
+    </ClCompile>
+    <ClCompile Include="Sliver.cpp">
+      <Filter>소스 파일\Sliver</Filter>
+    </ClCompile>
+    <ClCompile Include="Gold.cpp">
+      <Filter>소스 파일\Gold</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -27,7 +42,13 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Bronze.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\Bronze</Filter>
+    </ClInclude>
+    <ClInclude Include="Sliver.h">
+      <Filter>소스 파일\Sliver</Filter>
+    </ClInclude>
+    <ClInclude Include="Gold.h">
+      <Filter>소스 파일\Gold</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
